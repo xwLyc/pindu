@@ -1,0 +1,476 @@
+@import './common.scss';
+.detail{
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f8f8;
+    // height: 100%;
+    // overflow: hidden;
+    // overflow-y: auto;
+
+}
+.videoBox{
+    .video{
+        width: 100%;
+        height: rem(420);
+        background: #f1f1f1;
+        .videoPlay{
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            .btn{
+                width: rem(106);
+                height: rem(98);
+                position: absolute;
+                bottom: rem(20);
+                right: rem(30);
+                z-index: 1;
+            }
+        }
+        .videoPreview,video{
+            width: 100%;
+            height: rem(422);
+        }
+        video{
+            border: none;
+            width: 100%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // z-index: 2;
+        }
+    }
+    .videoTitle{
+        width: 100%;
+        height: rem(88);
+        line-height: rem(88);
+        font-size: rem(30);
+        color: #FFF;
+        p{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    }
+    .adver{
+        width: rem(690);
+        display: block;
+        overflow: hidden;
+        margin: rem(20) auto;
+        border-radius: rem(12);
+    }
+    .questionBox{
+        width: rem(690);
+        overflow: hidden;
+        margin: rem(20) auto;
+        border-radius: rem(12);
+        .question{
+            width: 100%;
+            background: #fff2a9;
+            border-radius: rem(2) solid url('../../assets/img/img08.png');
+            overflow: hidden;
+            .qL{
+                width: rem(120);
+                // overflow: hidden;
+                // @include verhorAlign;
+                img{
+                    width: rem(58);
+                    height: rem(59);
+                    margin: rem(15) auto rem(10);
+                }
+            }
+            .qR{
+                width: rem(560);
+                .t1{
+                    height: rem(20);
+                    margin: rem(18) 0 rem(14);
+                    font-size: rem(24);
+                    color: #834b26;
+                }
+                .t2{
+                    line-height: rem(40);
+                    font-size: rem(25);
+                    font-weight: bold;
+                    color: #7a3f1d;
+                    margin: rem(6) 0;
+                }
+            }
+        }
+        .qaLine{
+            width: 100%;
+            height: rem(2);
+            background: url('../../assets/img/img08.png') repeat-x;
+            // background-size: auto 100%;
+        }
+        .answer{
+            background: #fff9d4;
+            min-height: rem(54);
+            overflow: hidden;
+            .aL{
+                width: rem(120);
+                .lookAnswer{
+                    font-size: rem(22);
+                    width: rem(96);
+                    height: rem(34);
+                    display: inline-block;
+                    margin-top: rem(8);
+                    line-height: rem(38);
+                    background: #ff9517;
+                    border-radius: rem(5);
+                    color: #FFF;
+                }
+            }
+            .aR{
+                width: rem(560);
+                .answerText{
+                    margin: rem(10) 0;
+                    font-size: rem(25);
+                    line-height: rem(38);
+                    color: #7a3f1d;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.commentBox{
+    width: rem(690);
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: rem(140);
+    .toComment{
+        width: 100%;
+        height: rem(40);
+        line-height: rem(50);
+        font-size: rem(26);
+        color: #7a3f1d;
+        text-align: right;
+    }
+    .commentTotal{
+        width: 100%;
+        height: rem(50);
+        color: #bebebe;
+        line-height: rem(50);
+        font-size: rem(24);
+    }
+    .commentModule{
+        width: 100%;
+        margin-bottom: rem(16);
+        overflow: hidden;
+        .head{
+            width: rem(64);
+            height: rem(64);
+            border-radius: 100%;
+            overflow: hidden;
+            margin-right: rem(20);
+        }
+        .commentInfo{
+            width: rem(606);
+           .nickName{
+               height: rem(34);
+               line-height: rem(40);
+               font-size: rem(26);
+               color: #7a3f1d;
+           }
+           .commentTime{
+                height: rem(40);
+                line-height: rem(40);
+                font-size: rem(20);
+                color: #bebebe;
+           }
+           .commentDetail{
+                // height: rem(34);
+                line-height: rem(40);
+                font-size: rem(26);
+                color: #323232;
+           }
+           .commentLike{
+               width: rem(300);
+               height: rem(30);
+               position: absolute;
+               top: 0;
+               right: 0;
+               z-index: 1;
+               .likeImg{
+                   width: rem(28);
+                   height: rem(28);
+               }
+               .likeNum{
+                   height: rem(30);
+                   display: block;
+                   font-size: rem(20);
+                   color: #bebebe;
+                   line-height: rem(40);
+                   margin-right: rem(10);
+               }
+               &.liked{
+                   .likeNum{
+                       color: #ff5a00;
+                   }
+               }
+           }
+        }
+        
+    }
+    .newComment{
+        width: 100%;
+        .newLine{
+            width: 100%;
+            height: rem(40);
+            margin: rem(14) 0;
+            p.line{
+                height: rem(20);
+                border-bottom: rem(1) solid #e9e9e9;
+            }
+            p.newText{
+                width: rem(126);
+                height: rem(40);
+                line-height: rem(40);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                z-index: 1;
+                font-size: rem(24);
+                color: #bebebe;
+                background: #f8f8f8;
+            }
+        }
+    }
+    .lookMore{
+        width: 100%;
+        height: rem(40);
+        line-height: rem(40);
+        padding-top: rem(10);
+        font-size: rem(26);
+        text-align: center;
+        color: #834b26;
+    }
+    .commentFabu{
+        width: 100%;
+        // height: rem(110);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background: #FFF;
+        box-shadow: 0 rem(-2) rem(3) #ddd;
+        &.modify{
+            position: absolute;
+        }
+        .fabuBox{
+            width: rem(690);
+            height: rem(110);
+            margin: 0 auto;
+            position: relative;
+            .mark{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            .head{
+                width: rem(64);
+                height: rem(64);
+                border-radius: 100%;
+                overflow: hidden;
+                margin: rem(20);
+                margin-left: 0;
+            }
+            .inpText{
+                width: rem(440);
+                padding: rem(15) rem(30);
+                height: rem(42);
+                line-height: rem(42);
+                font-size: rem(26);
+                border-radius: rem(50);
+                border: rem(2) solid #dddddd;
+                margin-top: rem(16);
+                font-size: rem(24);
+                color: #666;
+            }
+            .fabuBtn{
+                width: rem(100);
+                height: rem(72);
+                line-height: rem(72);
+                font-size: rem(26);
+                color: #dedede;
+                padding: rem(20) 0;
+                &.inputed{
+                    color: #ff9517;
+                }
+            }
+        }
+        .iosX{ 
+            width: 100%;
+            height: rem(60);
+            background: #000;
+            display: none;
+        }
+        
+    }
+}
+
+.completeBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.75);
+    @include verhorAlign;
+    .lion{
+        width: rem(498);
+        height: rem(533);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1;
+    }
+    .galleryTopBox{
+        width: rem(708);
+        height: rem(560);
+        // margin: rem(22) auto;
+        border-radius: rem(40);
+        background: #ffc600;
+        box-shadow: 0 rem(8) #e3a11e;
+        .atop{
+            display: block;
+        }
+        .close1{
+            width: rem(117);
+            height: rem(117);
+            position: absolute;
+            bottom: rem(-144);
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+        }
+        .galleryTop{
+            width: rem(682);
+            height: rem(384);
+            margin: 0 auto;
+            border-radius: rem(8);
+            overflow: hidden;
+            // background: red;
+            .fmImg{
+                width: rem(682);
+                height: rem(384);
+                overflow: hidden;
+                border-radius: rem(8);
+                img{
+                    width: 100%;
+                    max-height: initial;
+                }
+                .lock,.play1{
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.4);
+                    @include verhorAlign;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    &.lock{ 
+                        img{
+                            width: rem(118);
+                            height: rem(153);
+                        }
+                    }
+                    &.play1{ 
+                        background: rgba(0, 0, 0, 0.2);
+                        img{
+                            width: rem(98);
+                            height: rem(98);
+                        }
+                    }
+                }
+            }
+            
+        }
+        .galleryText{
+            width: rem(682);
+            height: rem(88);
+            line-height: rem(90);
+            color: $color1;
+            font-size: rem(30);
+        }
+    }
+}
+
+.commentText{
+    width: 100%;
+    min-height: 100vh;
+    background: #f3f3f3;
+    .videoName{
+        width: rem(690);
+        padding: rem(30) 0 rem(20);
+        margin: 0 auto;
+        color: #000000;
+        font-size: rem(34);
+        line-height: rem(46);
+        overflow: hidden;
+    }
+    .textareaBox{
+        width: rem(690);
+        height: rem(210);
+        padding: rem(20) rem(30);
+        background: #FFF;
+        .contentText{
+            width: 100%;
+            height: 100%;
+            color: #333333;
+            line-height: rem(36);
+            font-size: rem(26);
+            resize: none;
+        }
+    }
+    .commentButton{
+        width: rem(690);
+        height: rem(84);
+        line-height: rem(84);
+        border-radius: rem(10);
+        margin: rem(24) auto 0;
+        background: #ffc600;
+        font-size: rem(34);
+        color: #FFF;
+        text-align: center;
+    }
+}
+@media (device-width: 375px) and (device-height: 812px) and (-webkit-min-device-pixel-ratio : 3){
+    .commentBox {
+        padding-bottom: rem(200);
+        .commentFabu{
+            .iosX{
+                display: block;
+            }
+        }
+    }
+}
+// @supports (bottom: constant(safe-area-inset-bottom)) {
+
+//     .commentBox {
+//         padding-bottom: rem(200);
+//         .commentFabu{
+//             .iosX{
+//                 display: block;
+//             }
+//         }
+//     }
+    
+
+// }
