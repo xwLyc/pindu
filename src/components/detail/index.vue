@@ -23,7 +23,7 @@
     import vComment from './comment'
     import { mapState, mapActions } from 'vuex'
     import iconShare from '../../assets/img/icon.jpg'
-    const ROOT_URL = 'https://wx.donut.cn'
+    const ROOT_URL = 'https://a.donut.cn'
     export default {
         data() {
             return {

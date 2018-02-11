@@ -28,7 +28,7 @@
 import { mapState, mapActions } from 'vuex'
 import Utils from '../../utils'
 import iconShare from '../../assets/img/icon.jpg'
-const ROOT_URL = 'https://wx.donut.cn'
+const ROOT_URL = 'https://a.donut.cn'
 export default {
     data (){
         return {
