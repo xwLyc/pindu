@@ -3,8 +3,8 @@
         .video.pos_r
             .videoPlay( v-show="!videoPlaying" @click="videoPlay")
                 img.btn(src="../../assets/img/playBtn.png")
-            img.videoPreview(:src="videoPreview.url?videoPreview.url:''" v-show="!videoPlaying" )
-            video(ref="video" :src="videoUrl" v-show="videoPlaying" controls preload="auto" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true")                                                                                                           
+            img.videoPreview(:src="lessonImage?lessonImage:''" v-show="!videoPlaying" )
+            video(ref="video" :src="videoInfo?videoInfo.url:''" v-show="videoPlaying" controls preload="auto" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true")                                                                                                           
             
             
             audio(ref="msgr"  preload="auto" src="http://static.beetobees.com/music-wx/msg.mp3")
@@ -31,7 +31,7 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
-    props: ['videoUrl'],
+    // props: ['videoUrl'],
     data(){
         return{
             videoPlaying: false,
@@ -84,10 +84,8 @@ export default {
     },
     computed: {
         ...mapState(['ruleType']),
-        ...mapState('moduleDetail',['videoInfo','videoPreview','lessonName','question','answer']),
-        // videoUrl(){
-        //     return this.videoInfo.url
-        // }
+        ...mapState('moduleDetail',['videoInfo','videoPreview','lessonName','question','answer','lessonImage']),
+  
  
     },
     beforeDestroy(){

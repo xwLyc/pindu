@@ -1,0 +1,81 @@
+/*
+ * @Author: lyc 
+ * @Date: 2018-03-16 11:17:12 
+ * @Last Modified by: liyuancheng
+ * @Last Modified time: 2018-03-16 12:30:57
+ */
+ @import './common.scss';
+ .entrance{
+     min-height: 100vh;
+     background: #dbdbdb;
+ }
+ .listAction{
+     li{
+         margin-top: rem(22);
+     }
+     background: #FFF;
+     .fTop{
+         padding: rem(30);
+         border-bottom: rem(1) solid #e0e0e0;
+     }
+     .fmLeft{
+         width: rem(284);
+         height: rem(170);
+         display: inline-block;
+         border-radius: rem(6);
+         overflow: hidden;
+         margin-right: rem(28);
+     }
+     .fmRight{
+         width: rem(370);
+        h4{
+            font-size: rem(28);
+            line-height: rem(40);
+            padding: rem(4) 0;
+            font-weight: normal;
+        }
+        .tag{
+            margin-top: rem(10);
+            p{
+                width: rem(108);
+                height: rem(32);
+                border-radius: rem(2);
+                border: rem(2) solid #e0e0e0;
+                float: left;
+                line-height: rem(32);
+                text-align: center;
+                color: #878787;
+                font-size: rem(20);
+                margin-right: rem(14);
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        .des{
+            margin-top: rem(10);
+            color: #979797;
+            font-size: rem(22);
+            line-height: rem(30);
+        }
+     }
+     .fBottom{
+         height: rem(100);
+        font-size: 0;
+         p{
+             width: rem(278);
+             height: rem(58);
+             border: rem(2) solid #ffb400;
+             display: inline-block;
+             line-height: rem(58);
+             font-size: rem(28);
+             border-radius: rem(30);
+             margin: rem(20) rem(35);
+             color: #ffb400;
+             &.baoming{
+                border: rem(2) solid #ff7e00;
+                color: #ff7e00;
+             }
+         }
+     }
+ }

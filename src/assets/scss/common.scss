@@ -2,7 +2,7 @@
  * @Author: lyc 
  * @Date: 2017-11-07 09:55:17 
  * @Last Modified by: liyuancheng
- * @Last Modified time: 2017-12-06 10:27:28
+ * @Last Modified time: 2018-03-16 12:09:32
  */
 
 @function rem($px) {
@@ -100,6 +100,8 @@ a{
 .ofh{
     overflow: hidden;
 }
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
+.clearfloat{zoom:1}
 
 //文本溢出省略号显示
 @mixin ellipsis($line:1){

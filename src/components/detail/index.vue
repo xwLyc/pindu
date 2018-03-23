@@ -13,7 +13,7 @@
                 p.galleryText.tac {{lessonName}}
                 .close1(@click="complete = false")
                     img(src="../../assets/img/close1.png")
-        v-video(:videoUrl="videoInfo.url")
+        v-video
         v-comment
 </template>
 
@@ -76,6 +76,7 @@
             this.$root.$on('close1', (status) => {
                 this.complete = status;
             });
+            console.log('videoInfo: '+JSON.stringify(this.videoInfo))
     
         },
         methods: {

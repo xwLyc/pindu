@@ -2,7 +2,7 @@
     section.main.pos_r
         transition(name="fade")
             p.aniFade(v-show="aniFade" v-if="userInfo.vipDay>0") 请先读完第{{willRead-1}}个课节哦~
-            p.aniFade(v-show="aniFade" v-else) 还差{{userInfo.minPeopleUnlock - userInfo.child_count}}人扫码就可以解锁了哦~
+            p.aniFade(v-show="aniFade" v-else) 邀请{{peopleUnlock}}位好友扫码即可解锁~
         .galleryTopBox
             img.topImg(src="../../assets/img/img02.png")
             .galleryTop
@@ -202,10 +202,17 @@ export default {
     computed: {
         ...mapState(['ruleType']),
         ...mapState('moduleHome',['lesson','userInfo']),
+        peopleUnlock(){
+            console.log(this.userInfo)
+            if(this.userInfo){
+                let n = this.userInfo.minPeopleUnlock - this.userInfo.child_count;
+                return n < 0 ? 1 : n;
+            }
+        },
         swiper(){
             console.log(this.$refs.mySwiper.swiper)
         }
-    }
+    },
 };
 </script>
 <style lang="scss">

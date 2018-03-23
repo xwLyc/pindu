@@ -64,11 +64,11 @@ const actions = {
             Route.push('/home');
         }else{
             Detail.queryLesson({lesson_id: state.lessonId}).then(res =>{
-                // console.log(res)
+                console.log(res)
                 let LessonInfo = res.data.data;
                 // console.log(LessonInfo)
                 context.commit('videoInfo',LessonInfo.video);
-                context.commit('videoPreview',LessonInfo.preview);
+                // context.commit('videoPreview',LessonInfo.preview);
                 context.commit('lessonName',LessonInfo.name);
                 context.commit('lessonImage',LessonInfo.image.url);
                 context.commit('question',LessonInfo.question);

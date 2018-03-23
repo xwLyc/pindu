@@ -17,7 +17,7 @@
                 a.fr(href="javascript:;" @click="goShare" :class="{unlock: userInfo.vipAllDay==0}") 去分享
             .tDate.top3
                 p.fl
-                    span.red +28
+                    span.red +7
                     span  天
                 a.fr(:href="userInfo.vipAllDay > 0 ? hrefUrl :'javascript:;'" :class="{unlock: userInfo.vipAllDay==0}" v-if="!userInfo.waijiao") 去上课
                 p.fr.end(v-else) 已完成
