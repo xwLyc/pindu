@@ -3,24 +3,24 @@
         img(:src="userInfo.poster" v-show="unlockImg")
         .rule.pos_r(v-show="!unlockImg")
             img(src="../../assets/img/img07.png")
-            .tDate.top1
-                p.fl
-                    span.red +7
-                    span  天
-                p.fr.end(v-if="userInfo.vipAllDay>0") 已完成
-                a.fr(href="javascript:;" v-else @click="unlockImg = true" ) 去解锁
-            .tDate.top2
-                p.fl
-                    span.red +7
-                    span  天
-                //- p.fr.end 已完成
-                a.fr(href="javascript:;" @click="goShare" :class="{unlock: userInfo.vipAllDay==0}") 去分享
-            .tDate.top3
-                p.fl
-                    span.red +7
-                    span  天
-                a.fr(:href="userInfo.vipAllDay > 0 ? hrefUrl :'javascript:;'" :class="{unlock: userInfo.vipAllDay==0}" v-if="!userInfo.waijiao") 去上课
-                p.fr.end(v-else) 已完成
+            //- .tDate.top1
+            //-     p.fl
+            //-         span.red +7
+            //-         span  天
+            //-     p.fr.end(v-if="userInfo.vipAllDay>0") 已完成
+            //-     a.fr(href="javascript:;" v-else @click="unlockImg = true" ) 去解锁
+            //- .tDate.top2
+            //-     p.fl
+            //-         span.red +7
+            //-         span  天
+            //-     //- p.fr.end 已完成
+            //-     a.fr(href="javascript:;" @click="goShare" :class="{unlock: userInfo.vipAllDay==0}") 去分享
+            //- .tDate.top3
+            //-     p.fl
+            //-         span.red +7
+            //-         span  天
+            //-     a.fr(:href="userInfo.vipAllDay > 0 ? hrefUrl :'javascript:;'" :class="{unlock: userInfo.vipAllDay==0}" v-if="!userInfo.waijiao") 去上课
+            //-     p.fr.end(v-else) 已完成
             .closeRule(@click="closeRule")
 
 </template>

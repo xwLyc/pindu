@@ -5,7 +5,7 @@
             .duihuan
                 template(v-if="!unlock")
                     p.t1 请输入兑换码
-                    input.t2(type="tel" v-model="dhCode" placeholder="请输入8位数字" maxlength="8" size="8")
+                    input.t2(type="text" v-model="dhCode" placeholder="请输入兑换码" maxlength="8" size="8")
                     p.t3 {{exchangeText}}
                 template(v-else)
                     p.t4 您已兑换成功！

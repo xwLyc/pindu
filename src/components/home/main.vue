@@ -79,7 +79,7 @@ export default {
     mounted(){
             this.$store.dispatch('moduleHome/homeInit').then(ruletype => {
                 if(ruletype){   //设置标题
-                    document.title = '小狮子说英语';
+                    document.title = '多纳学英语';
                 }else{
                     document.title = '多纳自然拼读';
                 }
