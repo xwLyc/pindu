@@ -68,7 +68,7 @@ const actions = {
                 let LessonInfo = res.data.data;
                 // console.log(LessonInfo)
                 context.commit('videoInfo',LessonInfo.video);
-                // context.commit('videoPreview',LessonInfo.preview);
+                context.commit('videoPreview',LessonInfo.preview);
                 context.commit('lessonName',LessonInfo.name);
                 context.commit('lessonImage',LessonInfo.image.url);
                 context.commit('question',LessonInfo.question);

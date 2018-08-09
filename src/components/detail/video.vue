@@ -3,7 +3,7 @@
         .video.pos_r
             .videoPlay( v-show="!videoPlaying" @click="videoPlay")
                 img.btn(src="../../assets/img/playBtn.png")
-            img.videoPreview(:src="lessonImage?lessonImage:''" v-show="!videoPlaying" )
+            img.videoPreview(:src="videoPreview?videoPreview.url:lessonImage" v-show="!videoPlaying" )
             video(ref="video" :src="videoInfo?videoInfo.url:''" v-show="videoPlaying" controls preload="auto" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true")                                                                                                           
             
             
@@ -11,7 +11,7 @@
         .videoTitle.pos_r
             img(src="../../assets/img/titleBg.png")
             p.tac {{lessonName}}
-        a.adver(href="http://un.koolearn.com/alliance/click?userid=ff8080815b891434015b891434790000&utm_item=%E5%BE%AE%E4%BF%A1%E6%B4%BB%E5%8A%A8-%E7%BB%98%E6%9C%AC%E6%89%93%E5%8D%A1%E7%AC%AC%E4%B8%80%E5%A4%A90%E5%85%83&kid=6e8ab0b0074f4f648f3893a244ff69f2&url=https%3A%2F%2Fdonut.koolearn.com%2Fapp%2FonlineClassSchool1.html%3Futm_source%3Dwx1-Reading0-1" v-if="ruleType")
+        a.adver(href="http://un.koolearn.com/alliance/click?userid=ff8080815b891434015b891434790000&utm_item=%E5%B0%8F%E7%8B%AE%E5%AD%90%E8%AF%B4%E8%8B%B1%E8%AF%AD-%E5%85%91%E6%8D%A2%E7%B1%BB%E5%B9%BF%E5%91%8A0&kid=04cc0aeb64e7481ba34aaa25bb2cf948&url=https%3A%2F%2Fdonut.koolearn.com%2Fmarket%2FWeixin_Acquisition.html%3Futm_source%3Dwx1-exchange-0" v-if="ruleType")
             img(src="../../assets/img/banner.png")
         .questionBox(v-else)
             .question

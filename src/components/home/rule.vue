@@ -2,25 +2,27 @@
     section.ruleBox
         img(:src="userInfo.poster" v-show="unlockImg")
         .rule.pos_r(v-show="!unlockImg")
-            img(src="../../assets/img/img07.png")
-            //- .tDate.top1
-            //-     p.fl
-            //-         span.red +7
-            //-         span  天
-            //-     p.fr.end(v-if="userInfo.vipAllDay>0") 已完成
-            //-     a.fr(href="javascript:;" v-else @click="unlockImg = true" ) 去解锁
-            //- .tDate.top2
-            //-     p.fl
-            //-         span.red +7
-            //-         span  天
-            //-     //- p.fr.end 已完成
-            //-     a.fr(href="javascript:;" @click="goShare" :class="{unlock: userInfo.vipAllDay==0}") 去分享
-            //- .tDate.top3
-            //-     p.fl
-            //-         span.red +7
-            //-         span  天
-            //-     a.fr(:href="userInfo.vipAllDay > 0 ? hrefUrl :'javascript:;'" :class="{unlock: userInfo.vipAllDay==0}" v-if="!userInfo.waijiao") 去上课
-            //-     p.fr.end(v-else) 已完成
+            //- img(src="../../assets/img/img07.png")
+            img(src="../../assets/img/img07.1.png")
+            .tDate.top1
+                p.fl
+                    span.red +7
+                    span  天
+                p.fr.end(v-if="userInfo.vipAllDay>0") 已完成
+                a.fr(href="javascript:;" v-else @click="unlockImg = true" ) 去解锁
+                //- a.fr(href="javascript:;" @click="goShare" v-if="userInfo.vipAllDay<=0" :class="{unlock: userInfo.vipAllDay==0}") 去解锁
+            .tDate.top2
+                p.fl
+                    span.red +7
+                    span  天
+                //- p.fr.end 已完成
+                a.fr(href="javascript:;" @click="goShare" :class="{unlock: userInfo.vipAllDay==0}") 去分享
+            .tDate.top3
+                p.fl
+                    span.red +7
+                    span  天
+                a.fr(:href="userInfo.vipAllDay > 0 ? hrefUrl :'javascript:;'" :class="{unlock: userInfo.vipAllDay==0}" v-if="!userInfo.waijiao") 去上课
+                p.fr.end(v-else) 已完成
             .closeRule(@click="closeRule")
 
 </template>
@@ -93,7 +95,7 @@ export default {
             return this.userInfo.userId;
         },
         hrefUrl(){
-            let hrefUrl = 'http://un.koolearn.com/alliance/click?userid=ff8080815b891434015b891434790000&url=http%3A%2F%2Fdonut.koolearn.com%2Fapp%2FonlineClassSchool1.html%3Futm_source%3Dwx1-Phonisc0-1&utm_item=%E5%BE%AE%E4%BF%A1%E6%B4%BB%E5%8A%A8-%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB0%E5%85%83%EF%BC%88%E9%97%A8%E6%A7%9B%EF%BC%89&kid=1e6fbc7fe1f34a43b43a3e84438f58b6';
+            let hrefUrl = 'http://un.koolearn.com/alliance/click?userid=ff8080815b891434015b891434790000&utm_item=%E5%B0%8F%E7%8B%AE%E5%AD%90%E8%AF%B4%E8%8B%B1%E8%AF%AD-%E6%B4%BB%E5%8A%A8-%E8%87%AA%E7%84%B6%E6%8B%BC%E8%AF%BB%E5%B9%BF%E5%91%8A%E4%BD%8D-0&kid=80fd803f8ae64371a5a5233fbaf7fb54&url=https%3A%2F%2Fdonut.koolearn.com%2Fmarket%2FWeixin_Acquisition.html%3Futm_source%3Dwx1-campaign-phonics-0';
             return hrefUrl + '&courseIdXq=' + this.courseId + '&userIdXq=' + this.userId;
         }
     }
